@@ -4,69 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>awaa</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
+
   <body
     style="
-      background-image: url(https://i.pinimg.com/1200x/28/62/9b/28629bd8817aad84c865aff40c3ca86f.jpg);
+      background-image: url(https://i.pinimg.com/736x/68/15/f8/6815f8cffe3fa7773dd08bd3bbc40384.jpg);
+      background-size: cover;
+      background-position: center;
     "
     class="flex justify-center h-screen items-center"
   >
+
+    <!-- AUDIO -->
+    <audio id="musik" loop>
+      <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- KARTU -->
     <div
       class="bg-white border px-10 py-8 border-4 border-rose-300 shadow-lg shadow-rose-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
       id="kartu"
     >
-      <h1 class="text-3xl"></h1>
       <h1
         class="text-4xl text-rose-500 font-bold animate__animated animate__pulse animate__infinite"
       >
-        HALOO
+        hai
       </h1>
+
       <button
         class="p-2 bg-rose-600 text-white rounded mt-5 hover:bg-rose-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
-        onclick="ubahKartu()"
+        onclick="mulaiMusic(); ubahKartu()"
       >
         KLIK
       </button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    
     <script>
       let kartu = document.getElementById("kartu");
 
-      function ubahKartu() {
-        // 1. Jalankan efek kembang api saat tombol diklik
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 },
-        });
+      // PLAY MUSIC
+      function mulaiMusic() {
+        document.getElementById("musik").play();
+      }
 
-        // 2. Ubah isi teks kartunya
+      // SLIDE 1
+      function ubahKartu() {
         kartu.innerHTML = `
-          <h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
-            hai, gimana kamu kemarin? huhu kadang aku suka kepikiran nanti siapa yang nemenin kamu mole kalo bukan aku, trus kan sempet aku blok tu ya hehehe tapi aku buka lagi aku rasa aku percuma ngeblok kamu kalo aku ternyata masih tetep kepoin kehidupan kamu, HUHUU SEDIH MARAPTHON, hehe aku ngetik ini pas banget muncul notif saluran ig nya ibot, jadi sedih, oke balik ke topik, trus kan pas aku blm buka blok nya kamu ngintip ngintip tiktok aku ya WKWKKA, trus ga lama aku buka blok nya kamu chat aku, itu posisinya aku lagii sama temen tau di pasar malem, uda ah kepanjangan, aku masi boleh bilang love u ga? 🙇🏻‍♀️
-          </h1>
-          <h2 class="mt-3 animate__animated animate__fadeIn">
-            - Dari : awa cantik -
-          </h2>
+          <h1 class="font-semibold animate__animated animate__zoomIn">
+          aku ngerti aku paham pasti cape rasanya kalo semuanya masalah tu dateng barengan kaya gt, kadang emang ada fase dimana kita tu ngerasa cape sm semuanya, kadang mau ngilang bentar aja, kadang juga mau diem tanpa perlu mikirin apa apa, jadi kalo kamu cape kamu rehat dulu sebentar, gausa paksa diri kamu buat keliatan baik baik ajaa, dan mau sejauh apapun aku sma kmu, aku masi ttp disinii, jadi kamu bisa cerita atau apapun kalo kamu mauu, tapi maaff kalo aku temeninnyaa lewat sini jadi kuran berasa hehe, maaff yaa          </h1>
+
           <button
-            class="p-2 bg-slate-600 text-white rounded mt-5 hover:bg-rose-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
-            onclick="refresh()"
+            class="p-2 bg-rose-600 text-white rounded mt-5 w-full"
+            onclick="slideDua()"
           >
-            Tutup
+            NEXT
           </button>
         `;
       }
 
-      function refresh() {
-        location.reload();
+      // SLIDE 2
+      function slideDua() {
+        kartu.innerHTML = `
+          <h1 class="font-semibold animate__animated animate__fadeIn">
+tapi secape apapun, seberat apapun masalahnyaa tetep bertahann yaa, hidup kamu gabisa trus trusan stuck disitu, hidup harus tetep berjalan          </h1>
+
+          <button
+            class="p-2 bg-rose-600 text-white rounded mt-5 w-full"
+            onclick="slideTiga()"
+          >
+            NEXT
+          </button>
+        `;
+      }
+
+      // SLIDE 3
+      function slideTiga() {
+        kartu.innerHTML = `
+          <img 
+            src="foto.img"
+            class="w-40 h-40 object-cover rounded-xl mx-auto animate__animated animate__fadeIn"
+          >
+
+          <h2 class="font-semibold mt-4 animate__animated animate__fadeIn">
+             
+          </h2>
+
+          <button
+            class="p-2 bg-rose-600 text-white rounded mt-5 w-full"
+            onclick="slideEmpat()"
+          >
+            NEXT
+          </button>
+        `;
+      }
+
+      // SLIDE 4
+      function slideEmpat() {
+        kartu.innerHTML = `
+          <img 
+            src="kis.gif"
+            class="w-40 mx-auto rounded-xl animate__animated animate__zoomIn"
+          >
+
+          <h1 class="font-semibold mt-4 animate__animated animate__fadeIn">
+            lasttt, love u hehehe 🤍
+          </h1>
+
+          <button
+            class="p-2 bg-black text-white rounded mt-5 w-full"
+            onclick="location.reload()"
+          >
+            SELESAI
+          </button>
+        `;
       }
     </script>
+
   </body>
 </html>
