@@ -15,7 +15,7 @@
 
   <body
     style="
-      background-image: url(https://i.pinimg.com/736x/68/15/f8/6815f8cffe3fa7773dd08bd3bbc40384.jpg);
+      background-image: url(https://i.pinimg.com/736x/99/b2/4d/99b24d48ac1c4ff32bb0dd4b1b71613e.jpg);
       background-size: cover;
       background-position: center;
     "
@@ -24,27 +24,28 @@
 
     <!-- AUDIO -->
     <audio id="musik" loop>
-      <source src="lagu.mp3" type="audio/mpeg">
+      <source src="bandaneira.mp3" type="audio/mpeg">
     </audio>
 
     <!-- KARTU -->
     <div
-      class="bg-white border px-10 py-8 border-4 border-rose-300 shadow-lg shadow-rose-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+      class="bg-white border px-10 py-8 border-4 border-blue-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
       id="kartu"
     >
       <h1
-        class="text-4xl text-rose-500 font-bold animate__animated animate__pulse animate__infinite"
+        class="text-4xl text-blue-500 font-bold animate__animated animate__pulse animate__infinite"
       >
-        babi
+        haii
       </h1>
 
       <button
-        class="p-2 bg-rose-600 text-white rounded mt-5 hover:bg-rose-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+        class="p-2 bg-blue-500 text-white rounded mt-5 hover:bg-blue-500 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
         onclick="mulaiMusic(); ubahKartu()"
       >
         KLIK
       </button>
     </div>
+    
 
     <script>
       let kartu = document.getElementById("kartu");
@@ -57,14 +58,19 @@
       // SLIDE 1
       function ubahKartu() {
         kartu.innerHTML = `
-        <img 
-            src="gambar.jpeg"
-            class="w-60 mx-auto rounded-xl animate__animated animate__zoomIn"
-          >
+        
           <h1 class="font-semibold animate__animated animate__zoomIn">
-        plis jangan terlalu gila sm cowo, jangan terus terusan pikirin orang lain, pastiin dulu diri lu lagi baik baik aja ngga, gua ga nyuruh lu buat berenti cinta sma itu orang, tapi tolong kalo cinta sma orang utamain cinta diri lu sendiri juga, kalo lu makin baikin orang orang yang ada dimanfaaatin, ya bagus kalo orang yang di baikin nya tau diri, coba kalo ngga, sakit di lu juga kan, demi allah ikut nyes pas bapaknya ngomong gt, harusnya dari sini lu udah sadar
-          <button
-            class="p-2 bg-rose-600 text-white rounded mt-5 w-full"
+          selamat ulang tahun pahrii, doa terbaik buat kamu
+
+          makasi yaa uda hari di kehidupan aku, makasi juga uda selalu ngertiin aku.
+          dan makasi uda sabar dan tetap bertahan sejauh ini..
+
+          kalo selama ini aku masi banyak kurang dalam ngertiin kamu, aku minta maaf yaa.
+
+          semoga kamu selalu bahagia, sehat, dan semua yang kamu inginkan bisa tercapai, Aamiin.
+
+          semoga di umur kamu yang sekarang, kamu dapet banyak hal baik dan semua urusan kamu di permudah🤍          <button
+            class="p-2 bg-blue-500 text-white rounded mt-5 w-full"
             onclick="slideDua()"
           >
             NEXT
@@ -75,11 +81,14 @@
       // SLIDE 2
       function slideDua() {
         kartu.innerHTML = `
+          <img 
+            src="pahri.jpeg"
+            class="w-40 h-30 object-cover rounded-xl mx-auto animate__animated animate__fadeIn"
+          >
           <h1 class="font-semibold animate__animated animate__fadeIn">
-        cerita apa aja ke gua, gausah pikirin hal ga penting itu, lu pikirin dia, dia mikirin lu ga? kalo semuanya lu pendem nnti meledak di akhir kaya aqeela, gua takut jadi posisinya jaya huhuhu, nanti gini  "kamu siapa, aku mau sama pardan"      </h1>
-
+          <3
           <button
-            class="p-2 bg-rose-600 text-white rounded mt-5 w-full"
+            class="p-2 bg-blue-500 text-white rounded mt-5 w-full"
             onclick="slideTiga()"
           >
             NEXT
@@ -91,16 +100,16 @@
       function slideTiga() {
         kartu.innerHTML = `
           <img 
-            src="image.img"
+            src="pahri2.jpeg"
             class="w-40 h-40 object-cover rounded-xl mx-auto animate__animated animate__fadeIn"
           >
 
           <h2 class="font-semibold mt-4 animate__animated animate__fadeIn">
-             terus
+             <3
           </h2>
 
           <button
-            class="p-2 bg-rose-600 text-white rounded mt-5 w-full"
+            class="p-2 bg-blue-500 text-white rounded mt-5 w-full"
             onclick="slideEmpat()"
           >
             NEXT
@@ -112,16 +121,15 @@
       function slideEmpat() {
         kartu.innerHTML = `
           <img 
-            src="gambar.jpeg"
+            src="kis.gif"
             class="w-60 mx-auto rounded-xl animate__animated animate__zoomIn"
           >
 
           <h1 class="font-semibold mt-4 animate__animated animate__fadeIn">
-            asli gua gapapa ga deket lagi sm lu, asal gua masi bisa liat elo, hidup lebih lama lagi ya kaka kw ku🤍
-          </h1>
+            hidup lebih lama lagi ya? sekali lagi happy birthday <3
 
           <button
-            class="p-2 bg-black text-white rounded mt-5 w-full"
+            class="p-2 bg-blue-500 text-white rounded mt-5 w-full"
             onclick="location.reload()"
           >
             SELESAI
